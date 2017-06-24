@@ -28,13 +28,13 @@ except ValueError:
 try:
     ht_in = int(input(' and inches: '))
 except ValueError:
-    print('I\'ll assume you\'re just ', ht_ft, 'feet tall then.')
+    print('I\'ll assume you\'re just', ht_ft, 'feet tall then.')
     ht_in = 0 
 
 ft_to_in = ht_ft * 12
 
 meter_ht = round((ft_to_in + ht_in) * 0.0254, 2)
 
-print('That equals to ', meter_ht, ' meters!', sep='')
+print('That equals to ', meter_ht,' meters!', sep='')
 
 sys.exit(0)
