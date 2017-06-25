@@ -1,5 +1,5 @@
 '''
-tkflag.py
+flag.py
 
 Draws the Dominican Republic flag in color on a tkinter Canvas widget.
 
