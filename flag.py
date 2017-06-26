@@ -13,7 +13,7 @@ import sys
 
 cross_width = 60
 height = 6 * cross_width
-width = int(height * 3/2) #450px
+width = int(height * 3/2)
 
 #The root widget is the window that will contain everything we draw.
 root = tkinter.Tk()
