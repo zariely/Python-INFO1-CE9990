@@ -48,16 +48,20 @@ else:
 
 daterange = month + bday
 
+#December 22 - January 19
+if  (356 <= daterange <= 365) or daterange <= 19:
+    print('You are a Capricorn!', end=e)
+    
 #January 20 - February 18
-if 20 <= daterange <= 49:
+elif daterange <= 49:
     print('You are an Aquarius!', end=e)
 
 #February 19 - March 20  
-elif 50 <= daterange <= 79:
+elif daterange <= 79:
     print('You are a Pisces!', end=e)
 
 #March 21 - April 19 
-elif 80 <= daterange <= 109:
+elif daterange <= 109:
     print('You are an Aries!', end=e)
 
 #April 20 - May 20  
@@ -65,11 +69,11 @@ elif 110 <= daterange <= 140:
     print('You are a Taurus!', end=e)
 
 #May 21 - June 20 
-elif 141 <= daterange <= 171:
+elif daterange <= 171:
     print('You are a Gemini!', end=e)
 
 #June 21 - July 22 
-elif 172 <= daterange <= 203:
+elif daterange <= 203:
     print('You are a Cancer!', end=e)
 
 #July 23 - August 22  
@@ -77,24 +81,21 @@ elif 204 <= daterange <= 234:
     print('You are a Leo!', end=e)
 
 #August 23 - September 22
-elif 235 <= daterange <= 265:
+elif daterange <= 265:
     print('You are a Virgo!', end=e)
 
 #September 23 - October 22 
-elif 266 <= daterange <= 295:
+elif daterange <= 295:
     print('You are a Libra!', end=e)
 
 #October 23 - November 21 
-elif 296 <= daterange <= 325:
+elif daterange <= 325:
     print('You are a Scorpio!', end=e)
 
 #November 22 - December 21 
-elif 326  <= daterange <= 355:
+elif daterange <= 355:
     print('You are a Sagittarius!', end=e)
 
-#December 22 - January 19
-elif  (356 <= daterange <= 365) or (1 <= daterange <= 19):
-    print('You are a Capricorn!', end=e)
 
 else:
     print('I have no idea what your sign is!', end=e)
