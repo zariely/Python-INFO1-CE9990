@@ -17,11 +17,12 @@ space = ' '
 
 row = int(input('How many rows of boxes? '))
 col = int(input('How many columns of boxes? '))
-width = int(input('How many rows of spaces in each box? '))
+width = int(input('How many columns of spaces in each box? '))
+height = int(input('How many rows of spaces in each box? '))
  
 
-a = plus + (width * dash + plus) * row
-b = pipe + (width * space + pipe) * row
+a = plus + (width * dash + plus) * col
+b = pipe + (height * space + pipe) * row
 
 x = 0
 while x < row:
