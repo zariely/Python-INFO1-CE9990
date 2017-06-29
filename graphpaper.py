@@ -32,5 +32,6 @@ while x < row:
     while y < col:
         print(b)
         y += 1
+print(a)
 
 sys.exit(0)
