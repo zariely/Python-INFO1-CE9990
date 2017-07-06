@@ -2,8 +2,7 @@
 flag.py
 
 Draws the Dominican Republic flag in color on a tkinter Canvas widget.
-This is a condensed version of the previous flag.py script, 
-including the drawPixel function
+This is a condensed version of the previous flag.py script
 
 '''
 
@@ -18,24 +17,20 @@ root = tkinter.Tk()
 root.title('Dominican Republic Flag')
 root.geometry(str(width) + 'x' + str(height))
 
-canvas = tkinter.Canvas(root, highlightthickness = 0, background = '#ffffff')
+red = '#CE1126'
+white = '#FFFFFF'
+blue = '#002D62'
 
+canvas = tkinter.Canvas(root, highlightthickness = 0, background = white)
 
 def drawPixel(x, y, color):
 
     assert isinstance(x, int) and isinstance(y, int) and isinstance(color, str)
     canvas.create_rectangle(x, y, x + 1, y + 1, width = 0, fill = color)
 
-#red color
-red = '#CE1126'
-#blue color
-blue = '#002D62'
 
-y = 0
-while y < height:
-
-    x = 0
-    while x < width:
+for y in range(height):
+    for x in range(width):
 
         #top left & bottom right rectangles (dark blue)
         if x < width * .444 and y < 2.5 * cross_width \
@@ -47,11 +42,7 @@ while y < height:
             or  x > width * .555 and y < 2.5 * cross_width:
             drawPixel(x, y, red)
 
-        x += 1
-    y += 1
-
-
-
+  
 #Make the canvas visible by packing it into the root.
 canvas.pack(expand = tkinter.YES, fill = "both")
 
