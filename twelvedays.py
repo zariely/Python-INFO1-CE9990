@@ -25,17 +25,16 @@ lyrics = [
     ]
 
 firstVerse = 'On the {}{} day of Christmas\nMy true love gave to me'
-verses = lyrics[::-1]
+lastVerse = 'A partridge in a pair tree.'
+verses = lyrics[::-1] #reverses the index order
 
 for a in range(1, len(verses)):
     
-    lastVerse = 'And a partridge in a pair tree.'
-
     if a == 1:
         o = 'st'
-        lastVerse = lastVerse[4:].capitalize()
     elif a == 2:
         o = 'nd'
+        lastVerse = 'And ' + lastVerse.lower()
     elif a == 3:
         o = 'rd'
     else:
