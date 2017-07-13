@@ -20,30 +20,32 @@ lyrics = [
     'Four colly birds',
     'Three French hens',
     'Two turtledoves',
-    None
+    None, #later becomes index 1
+    None #later becomes index 0 
     ]
 
+firstVerse = 'On the {}{} day of Christmas\nMy true love gave to me'
 verses = lyrics[::-1]
 
-for a in range(len(verses)):
-
-    firstVerse = 'On the %s%s day of Christmas\nMy true love gave to me'
+for a in range(1, len(verses)):
+    
     lastVerse = 'And a partridge in a pair tree.'
 
-    if a == 0:
+    if a == 1:
         o = 'st'
         lastVerse = lastVerse[4:].capitalize()
-    elif a == 1:
-        o = 'nd'
     elif a == 2:
+        o = 'nd'
+    elif a == 3:
         o = 'rd'
     else:
         o = 'th'
         
-    print(firstVerse %(a+1, o))
+    print(firstVerse.format(a, o))
 
-    for b in range(a, 0, -1):
+    for b in range(a, 1, -1):
         print(verses[b])
-    print(lastVerse, '', sep='\n')
+    print(lastVerse)
+    print()
         
 sys.exit(0)
