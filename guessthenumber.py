@@ -9,12 +9,12 @@ import sys
 import random
 
 def guessTheNumber():
+    print("Welcome to Guess the Number!")
+    print("Try to figure out what the secret number is!")
+
     while True:
         secretNumber = random.randint(1, 10)
         guesses = set()
-
-        print("Welcome to Guess the Number!")
-        print("Try to figure out what the secret number is!")
 
         while len(guesses) < 5:
             try:
@@ -23,19 +23,16 @@ def guessTheNumber():
             except ValueError:
                 print("{} is not a number!".format(guess))
             else:
-                if guess == secretNumber:
-                    print("You got it! My number was {}.".format(secretNumber))
-                    break
                 if guess in guesses:
                     print("You already guessed that number!")
-                # gives users a hint.
                 elif guess < secretNumber:
                     print("My number is higher than {}.".format(guess))
                 elif guess > secretNumber:
                     print("My number is lower than {}.".format(guess))
-
                 else:
-                    print("That's not it!")
+                    print("You got it! My number was {}.".format(secretNumber))
+                    print()
+                    break
                 guesses.add(guess)
         else:
             print()
