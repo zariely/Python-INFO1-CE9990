@@ -21,20 +21,21 @@ yqueryString = baseURL + urllib.parse.urlencode({'q':yqueryString}) + "&format=j
 result = urllib.request.urlopen(yqueryString).read()
 data = json.loads(result)
 
-day = data['query']['results']['channel']['item']['forecast'][0]['day']
-date = data['query']['results']['channel']['item']['forecast'][0]['date']
-city = data['query']['results']['channel']['location']['city']
-state = data['query']['results']['channel']['location']['region']
-high = data['query']['results']['channel']['item']['forecast'][0]['high']
-low = data['query']['results']['channel']['item']['forecast'][0]['low']
-text = data['query']['results']['channel']['item']['forecast'][0]['text']
-
+location = data['query']['results']['channel']['location']
+city = location['city']
+state = location['region']
+forecast = data['query']['results']['channel']['item']['forecast'][0]
+day = forecast['day']
+date = forecast['date']
+high = forecast['high']
+low = forecast['low']
+text = forecast['text']
 
 print("-" * 70)
-print("Here's today's weather forecast in {},{}:".format(city, state))
-print("Date:", day, date)
-print("High: {}°F".format(high))
-print("Low: {}°F".format(low))
-print(text)
+print("Here's today's weather forecast in {},{}".format(city, state))
+print("\tDate:", day, date)
+print("\tHigh: {}°F".format(high))
+print("\tLow: {}°F".format(low))
+print("\tConditions: {}".format(text))
 
 sys.exit(0)
