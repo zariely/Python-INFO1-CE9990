@@ -28,8 +28,7 @@ def guessTheNumber():
                     break
                 if guess in guesses:
                     print("You already guessed that number!")
-                    print()
-                #gives users a little hint.
+                # gives users a little hint.
                 elif guess < secretNumber:
                     print("My number is higher than {}.".format(guess))
                 elif guess > secretNumber:
@@ -37,18 +36,16 @@ def guessTheNumber():
 
                 else:
                     print("That's not it!")
-                guesses.add(guess) #adds number to the list
+                guesses.add(guess)
         else:
             print()
             print("Sorry, you lost. My number was {}.".format(secretNumber))
             print()
 
         playAgain = input("Would you like to play again? Y/N: ")
-        if playAgain.lower() == 'y':
-            break #check this
-        else:
+        if playAgain.lower() == 'n':
             print("Ok, bye!")
-            sys.exit(0)
+            break
 
 guessTheNumber()
 
