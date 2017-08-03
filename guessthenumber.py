@@ -11,7 +11,7 @@ import random
 def guessTheNumber():
     while True:
         secretNumber = random.randint(1, 10)
-        guesses = set()  # start with empty list
+        guesses = set()
 
         print("Welcome to Guess the Number!")
         print("Try to figure out what the secret number is!")
@@ -28,7 +28,7 @@ def guessTheNumber():
                     break
                 if guess in guesses:
                     print("You already guessed that number!")
-                # gives users a little hint.
+                # gives users a hint.
                 elif guess < secretNumber:
                     print("My number is higher than {}.".format(guess))
                 elif guess > secretNumber:
