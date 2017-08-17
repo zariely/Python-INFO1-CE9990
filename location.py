@@ -8,9 +8,9 @@ import sys, urllib.request, json
 class Location(object):
 
     def __init__(self, lat, lng):
-        if not isinstance(lat, int) or isinstance(lat, float):
+        if not isinstance(lat, int) or not isinstance(lat, float):
             raise TypeError('Latitude must be an integer, not {}.'.format(str(type(lat))))
-        if not isinstance(lng, int) or isinstance(lng, float):
+        if not isinstance(lng, int) or not isinstance(lng, float):
             raise TypeError('Longitude must be an integer, not {}.'.format(str(type(lng))))
 
         if lat > 90 or lat < -90:
